@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <script>
+        let times = +prompt("Nhập số  lượng phần tử của mảng");
+        let arr = [];
+        for (let i = 0; i< times; i++){
+            arr[i] = +prompt("Nhập phần tử thứ " + (i+1));
+        }
+        let square = arr.map(function (item){
+            return item * item;
+        });
+        let even = square.filter(function (item){
+            return item % 2 == 0;
+        });
+        console.log("Mảng bình phương và là số chẵn là: " + even);
+    </script>
+  
+</body>
+</html>

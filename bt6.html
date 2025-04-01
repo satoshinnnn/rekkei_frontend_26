@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // tạo mảng chứa 10 phần tử số nguyên 
+        // nhập vào một số nguyên
+        // tìm số lần xuất hiện số nguyên đó trong mảng và in ra màn hình 
+        arr = [1,2,3,2,2,5,6,8,4,5];
+        let guessNumber = +prompt("Enter a number");
+        let appear = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (guessNumber===arr[i]) {
+                appear++;
+            }
+        }
+        console.log(appear);
+    </script>
+</body>
+</html>

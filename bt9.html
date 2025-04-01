@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let times = +prompt("Nhập số  lượng phần tử của mảng");
+        let arr = [];
+        for (let i = 0; i< times; i++){
+            arr[i] = +prompt("Nhập phần tử thứ " + (i+1));
+        };       
+       let even = arr.filter(function (item){
+            return item % 2 == 0;
+        });
+        let sum = even.reduce(function (accumulator, currentValue) {
+            return accumulator + currentValue;
+        }, 0);
+        console.log("Tổng các phần tử là số chẵn là: " + sum);
+        let odd = arr.filter(function (item){
+            return item % 2 != 0;
+        });
+        let sumOdd = odd.reduce(function (accumulator, currentValue) {
+            return accumulator + currentValue;
+        }, 0);
+        console.log("Tổng các phần tử là số lẻ là: " + sumOdd); 
+        console.log(arr)
+     </script>
+</body>
+</html>

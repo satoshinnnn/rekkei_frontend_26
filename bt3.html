@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // tạo mảng chưa email người dung nhập
+      // mảng rỗng -> không hợp lệ 
+      // hàm kiểm tra mảng chứa các email hợp lệ và in ra mảng mới chứa email hợp lệ
+      // không có @ -> không hợp lệ 
+      // có khoảng trắng -> không hợp lệ 
+    let arrEmail = ["shinchan@gmail.com", "hello@gmail.com", "hello"];
+    if (arrEmail.length===0) {
+        console.log("Array is empty")
+    } else {
+        let validEmailArr = arrEmail.filter((email)=> {
+           return email.includes("@") && !email.includes(" ");
+        })
+        console.log(validEmailArr);
+    }
+    </script>
+</body>
+</html>

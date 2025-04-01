@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // trả về ảng mới chỉ chứa số nguyên tố (số nguyên tố lớn hơ 1 và chỉ chia hết cho 1 và chính nó)
+        // sử dụng filter để lọc các phần tử thỏa mãn 
+        let arr = [1,2,3,4,5];
+        let primes = arr.filter( function(num) {
+            if (num>=2) {
+                let check = 0;
+                for (let i =2; i <= Math.sqrt(num); i++) {
+                    if(num%i===0){
+                        check++
+                    }
+                }
+                if(check===0) {
+                    return num 
+                }
+            }
+        });
+       console.log(primes);
+    </script>
+</body>
+</html>
